@@ -4,6 +4,7 @@ import { SubmitHandler, useForm } from 'react-hook-form'
 import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
 
+import { Logo } from '../components/Header/Logo'
 import { Input } from '../components/Form/Input'
 
 type SignInFormData = {
@@ -40,6 +41,10 @@ export default function SignIn() {
         flexDir="column"
         onSubmit={handleSubmit(handleSignIn)}
       >
+        <Flex mb="24px" align="center" justify="center">
+          <Logo align="center" />
+        </Flex>
+
         <Stack spacing="16px">
           <Input
             name="email"
